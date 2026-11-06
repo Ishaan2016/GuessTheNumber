@@ -1,4 +1,38 @@
-<body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Guess the Number</title>
+        <style>
+         h1{
+    background-color:orange;
+}
+body{
+    background-image: url("https://thumbs.dreamstime.com/b/start-amazing-entertainment-event-26644186.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    text-align:center;
+}
+h2{
+    color:white;
+}
+input{
+    border-radius:10px;
+    border:none;
+    padding: 5px 20px;
+    width:200px;
+    }
+button{
+    padding: 5px 10px;
+    border-radius:10px;
+ background-image:linear-gradient(lightskyblue, royalblue);
+ border:none;
+}
+button:hover{
+    background-image:linear-gradient(orange,yellow,lightgoldenrodyellow);
+}
+         </style>
+        </head>
+        <body>
             <h1>Guess the Number Game</h1>
             <h2>Guess a number between 1 and 1000: </h2>
             <input type="number" placeholder="Enter a Number" id="num" min="1" max="1000">
@@ -7,8 +41,8 @@
             <script>
          let randomNum = Math.floor(Math.random() * 1000)+1;
 
-         function guessTheNumber{
-     let guessedNumber = document.getElementById("num").value;
+         function guessTheNumber(){
+     let guessedNumber = Number(document.getElementById("num").value);
 
                  if(!guessedNumber){
                     alert("Please Enter A Number");
@@ -28,3 +62,4 @@
          }
                 </script>
             </body>
+    </html>
