@@ -1,0 +1,30 @@
+<body>
+            <h1>Guess the Number Game</h1>
+            <h2>Guess a number between 1 and 1000: </h2>
+            <input type="number" placeholder="Enter a Number" id="num" min="1" max="1000">
+            <button onclick="guessTheNumber()">Submit Guess</button>
+            <h3 id="result"></h3>
+            <script>
+         let randomNum = Math.floor(Math.random() * 1000)+1;
+
+         function guessTheNumber{
+     let guessedNumber = document.getElementById("num").value;
+
+                 if(!guessedNumber){
+                    alert("Please Enter A Number");
+                 }
+                else if(guessedNumber === randomNum){
+              document.getElementById("result").innerHTML = "You guessed it correct!!!";
+              document.getElementById("result").style.color = "lightskyblue";
+                 }
+                  else if(guessedNumber > randomNum){
+              document.getElementById("result").innerHTML = "Too High!!! TRY AGAIN";
+              document.getElementById("result").style.color = "red";
+                 }
+                 else{
+              document.getElementById("result").innerHTML = "Too Low!!! TRY AGAIN";
+              document.getElementById("result").style.color = "red";
+                 }
+         }
+                </script>
+            </body>
